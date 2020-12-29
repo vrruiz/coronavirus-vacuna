@@ -5,12 +5,16 @@ draft: false
 images:
  - bnt162b2.png
 ---
+<!--
+
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@powerdns_bert">
 <meta name="twitter:creator" content="@powerdns_bert">
 <meta name="twitter:title" content="Reverse Engineering the source code of the BioNTech/Pfizer SARS-CoV-2 Vaccine">
 <meta name="twitter:description" content="Welcome! In this post, we'll be taking a character-by-character look at the source code of the BioNTech/Pfizer SARS-CoV-2 mRNA vaccine.">
 <meta name="twitter:image" content="https://berthub.eu/articles/bnt162b2.png">
+
+-->
 
 Por [Bert Hubert](https://berthub.eu/) | Traducción: [Víctor R. Ruiz](http://rvr.linotipo.es/)
 
@@ -33,13 +37,13 @@ Y ahora, puede que estas palabras resulten chocantes: la vacuna es líquedo que 
 Es una buena pregunta, así que vamos a comenzar con una pequeña parte del código fuente real de la vacuna BioNTech/Pfizer, también conocida como [BNT162b2](https://en.wikipedia.org/wiki/Tozinameran), Tozinameran o [Comirnaty](https://twitter.com/PowerDNS_Bert/status/1342109138965422083).
 
 <center>
-{{< figure src="/articles/bnt162b2.png" caption="First 500 characters of the BNT162b2 mRNA. Source: [World Health Organization](https://mednet-communities.net/inn/db/media/docs/11889.doc)">}}
+<img src="https://berthub.eu/articles/bnt162b2.png" caption="First 500 characters of the BNT162b2 mRNA. Source: [World Health Organization](https://mednet-communities.net/inn/db/media/docs/11889.doc)">
 </center>
 
 La vacuna de ARNm BNT162b posee este código digital en su corazón. Tiene una longitud de 4284 carácteres, así que cabe en unos cuantos tuits. Al comienzo del proceso de producción de la vacuna alguien copió este código en la impresora de ADN (sí), que luego convirtió los bytes del disco en moléculas de ADN reales.
 
 <center>
-{{< figure src="/articles/bioxp-3200.jpg" caption="Una impresora de ADN [Codex DNA](https://codexdna.com/products/bioxp-system/) BioXp 3200." >}}
+<img src="https://berthub.eu/articles/bioxp-3200.jpg" caption="Una impresora de ADN [Codex DNA](https://codexdna.com/products/bioxp-system/) BioXp 3200.">
 </center>
 
 Esta máquina produce pequeñas cantidades de ADN, que tras un montón de procesos químicos y biológicos termina como ARN (más sobre esto más tarde) en el vial de la vacuna. Una dosis de 30 migrogramos contiene en realidad 30 microgramos de ARN. Además, hay un sistema inteligente de empaquetado de lípidos (grasiento) que lleva el ARNm a nuestras células.
@@ -84,7 +88,7 @@ Y así es cómo se obtiene el 95% de eficiencia en la vacuna.
 [Vayamos ahora al inicio del todo, un buen sitio para empezar](https://youtu.be/jp0opnxQ4rY?t=8). El documento de la OMS tiene esta útil imagen:
 
 <center>
-{{< figure src="/articles/vaccine-toc.png"  >}}
+<img src="https://berthub.eu/articles/vaccine-toc.png">
 </center>
 
 Esto es una especie de índice de contenidos. Comenzaremos con «cap», mostrado como un pequeño sombrero.
@@ -135,7 +139,7 @@ Nuestras células traducen el ARN en proteínas utilizando una máquina llamada 
 
 <center>
 <video controls width="90%" loop>
-<source src="/articles/protein-short.mp4" type="video/mp4">
+<source src="https://berthub.eu/articles/protein-short.mp4" type="video/mp4">
 </video>
 <br/>
 Fuente: [Usuario Bensaccount de la Wikipedia](https://commons.wikimedia.org/wiki/File:Protein_translation.gif)
@@ -147,7 +151,7 @@ Este ribosoma necesita asentarse físicamente en la cadena de ARN para que funci
 
 Además, la región no traducida también contiene metadatos: ¿cuándo debería ocurrir esta traducción? ¿Cuánto? Para la vacuna, se seleccionó la región no traducida que más se parecería a «ya mismo», obtenida del [gen globina alfa](https://commons.wikimedia.org/wiki/File:Protein_translation.gif). Este gen es conocido por crear robustamente un montón de proteínas. En años anteriores, los científicos ya habían encontrado forma de optimizar aún más esta región no traducida  (según el documento de la OMS), así que no es exactamente la región no traducida globlina alfa. Es mejor.
 
-# El péptido señal de la glicoproteína S
+## El péptido señal de la glicoproteína S
 
 Como se ha indicado, el objetivo de la vacuna es decirle a la célula que produzca grandes cantidades de la proteína de la espiga del SARS-CoV-2. Hasta ahora, hemos identificado metadatos y «convención de llamadas» en el código fuente de la vacuna. Pero ahora nos vamos a introducir en el territorio de las proteínas virales.
 
@@ -175,7 +179,7 @@ Hay 4³=64 codones diferentes, dado que hay 4 carácteres de ARN y cada codón t
 La vida usa la siguiente tabla casi universal de correspondencia entre codones de ARN a aminoácidos:
 
 <center>
-{{< figure src="/articles/rna-codon-table.png" caption="[La tabla de codones](https://en.wikipedia.org/wiki/DNA_and_RNA_codon_tables) de ARN (Wikipedia)" >}}
+<img src="https://berthub.eu/articles/rna-codon-table.png" caption="[La tabla de codones](https://en.wikipedia.org/wiki/DNA_and_RNA_codon_tables) de ARN (Wikipedia)">
 </center>
 
 En esta tabla, podemos ver que las modificaciones en la vacuna (UUU → UUC) son todas sinónimas. El código ARN de la vacuna es diferente, pero produce los mismos aminoácidos y proteínas.
@@ -216,7 +220,7 @@ El tercer y cuarto codones representan cambios reales. Los aminoácidos K y V ha
 Así que, ¿qué está pasando aquí? Si miramos la partícula real de SARS-CoV-2, veremos que la proteína de la espiga es, bueno, un montón de espigas:
 
 <center>
-{{< figure src="/articles/sars-em.jpg" caption="[Partículas del virus del SARS](https://en.wikipedia.org/wiki/Severe_acute_respiratory_syndrome_coronavirus) (Wikipedia)" >}}
+<img src="https://berthub.eu/articles/sars-em.jpg" caption="[Partículas del virus del SARS](https://en.wikipedia.org/wiki/Severe_acute_respiratory_syndrome_coronavirus) (Wikipedia)">
 </center>
 
 Estas espigas están montadas en el cuerpo del virus («la proteína de la nucleocápside»). Pero la verdad es que nuestra vacuna solo genera las propias espigas, no las montamos en ningún cuerpo de virus.
@@ -231,7 +235,7 @@ Las personas que descubrieron esto deberían pasarse el día felicitándose. Ten
 
 > ¡Actualización! El laboratorio McLellan contactó conmigo, uno de los grupos que realizó el descubrimiento de las prolinas. Me han dicho que han aplazado la celebración debido a la pandemia, pero que están muy contentos de haber contribuido a las vacunas. También han resaltado la importancia de muchos otros grupos, trabajadores y voluntarios.
 
-# El final de la proteína, próximos pasos
+## El final de la proteína, próximos pasos
 
 Si revisamos el resto del código fuente, encontraremos algunas pequeñas modificaciones al final de la proteína de la espiga:
 
@@ -246,7 +250,7 @@ Si revisamos el resto del código fuente, encontraremos algunas pequeñas modifi
 
 Al final de la proteína encontramos un codón de parada, indicado por una «s» minúscula. Es una forma respetuosa de indicar que la proteína debe acabar aquí. El virus original usa el codón de parada UAA, la vacuna usa dos codones de parada UGA, quizás como precaución.
 
-# La región no traducida 3'
+## La región no traducida 3'
 
 Al igual que el ribosoma necesitaba un comienzo en el extremo 5', donde se encuentre la «región no traducida cinco prima», al final de una proteína se encuentra una zona similar llamada la «región no traducida tres prima» o extremo 3'.
 
@@ -255,10 +259,10 @@ Se podría escribir largo y tendido sobre el extremo 3', pero aquí voy a [citar
 Lo que sabemos es que algunos extremos 3' tienen mucho éxito promoviendo la expresión proteínica. Según el documento de la OMS, la región tres prima de la vacuna de BioNTech/Pfizer fue seleccionada del «potenciador amino-terminal de la división (AES) del ARNm y el ARN ribosómico 12S codificado mitocondrial para conferir estabilidad al ARN y una alta expresión proteínica». A lo que añado, bien hecho.
 
 <center>
-{{< figure src="/articles/vaccine.jpg" >}}
+<img src="https://berthub.eu/articles/vaccine.jpg">
 </center>
 
-# El AAAAAAAAAAAAAAAAAAAAAA final
+## El AAAAAAAAAAAAAAAAAAAAAA final
 
 El final del ARNm es poliadenilado. Esta es una forma técnica de decir que termina con un montón de AAAAAAAAAAAAAAAAAAA. Parece que incluso el ARNm ya ha tenido suficiente en 2020.
 
@@ -278,7 +282,7 @@ Esto son 30 As y luego un «enlazador nucleótido 10» (GCAUAUGACU) seguido de o
 
 Sospecho que lo que vemos aquí es el resultado de optimización propietaria extra para potenciar aún más la expresión proteínica.
 
-# En resumen
+## En resumen
 
 Con todo esto, ahora conocemos los contenidos exactos del ARNm de la vacuna BNT162b2 y por qué están ahí la mayoría de sus componentes:
 
