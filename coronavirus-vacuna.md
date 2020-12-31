@@ -52,7 +52,7 @@ El ARN es equivalente a la memoria volátil del ADN. El ADN es como el disco de 
 
 Para los ordenadores es la RAM y para la biología es el ARN. La similitud es asombrosa. A diferencia del disco sólido, la RAM se degrada rápidamente si no se la alimenta con electricidad. La razón por la que la vacuna de ARNm de Pfizer/BioNTech debe guardarse con los congeladores más congeladores es la misma: el ARNm es una frágil flor.
 
-Cada carácter de ARN pesa del orden de 0.53&nbsp;·&nbsp;10<sup>-21</sup> gramos, lo que significa que hay 6&nbsp;·&nbsp;10<sup>16</sup> caracteres en una única dosis de 30 migrogramos de la vacuna. Expresada en bytes, son unos 25 petabytes, aunque debe apuntarse que consiste en unos 2000 mil millones de repeticiones de los mismos 4285 caracteres. El contenido informativo de la vacuna solo tiene alrededor de un kilobyte. El [propio SARS-CoV-2](https://www.ncbi.nlm.nih.gov/projects/sviewer/?id=NC_045512&tracks=[key:sequence_track,name:Sequence,display_name:Sequence,id:STD649220238,annots:Sequence,ShowLabel:false,ColorGaps:false,shown:true,order:1][key:gene_model_track,name:Genes,display_name:Genes,id:STD3194982005,annots:Unnamed,Options:ShowAllButGenes,CDSProductFeats:true,NtRuler:true,AaRuler:true,HighlightMode:2,ShowLabel:true,shown:true,order:9]&v=1:29903&c=null&select=null&slim=0) tiene unos 7.5 kilobytes.
+Cada carácter de ARN pesa del orden de 5.3&nbsp;·&nbsp;10<sup>-22</sup> gramos, lo que significa que hay 5.7&nbsp;·&nbsp;10<sup>16</sup> caracteres en una única dosis de 30 microgramos (3.0&nbsp;·&nbsp;10<sup>-5</sup> gr) de la vacuna. Expresada en bytes, son unos 60 petabytes, aunque debe apuntarse que consiste en unas 14 billones (1.4&nbsp;·&nbsp;10<sup>13</sup>) de repeticiones de los mismos 4285 caracteres. El contenido informativo de la vacuna solo tiene alrededor de un kilobyte. El [propio SARS-CoV-2](https://www.ncbi.nlm.nih.gov/projects/sviewer/?id=NC_045512&tracks=[key:sequence_track,name:Sequence,display_name:Sequence,id:STD649220238,annots:Sequence,ShowLabel:false,ColorGaps:false,shown:true,order:1][key:gene_model_track,name:Genes,display_name:Genes,id:STD3194982005,annots:Unnamed,Options:ShowAllButGenes,CDSProductFeats:true,NtRuler:true,AaRuler:true,HighlightMode:2,ShowLabel:true,shown:true,order:9]&v=1:29903&c=null&select=null&slim=0) tiene unos 7.5 kilobytes.
 
 ## Un poco de información básica
 
@@ -71,7 +71,7 @@ Hasta ahora todo es bastante digital. Si tienes dudas, puedes consultar el [docu
 > Hay más información disponible en [«Qué es la vida»](https://berthub.eu/articles/posts/what-is-life/), que puede ser de ayuda para entender el resto de esta página. O si lo prefieres en vídeo, dispongo de [uno de dos horas](https://berthub.eu/dna).
 
 ## Así que, ¿qué HACE el código?
-
+/bil
 La idea de una vacuna es enseñar a nuestro sistema inmunitario a luchar contra una patógeno sin enfermar por el camino. Tradicionalmente, se ha hecho inyectando un virus atenuado o 
 incapacitado y un asistente para alarmar al sistema inmunitario y que entre en acción. Esta es una técnica análoga a la que necesitaba millones de huevos (o insectos). También requería un montón de suerte y mucho tiempo. A veces se usaba un virus diferente (no relacionado).
 
