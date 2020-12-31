@@ -80,11 +80,11 @@
 <p>Y ahora, puede que estas palabras te resulten chocantes: la vacuna es un líquido que se inyecta en el brazo… ¿cómo puede hablarse de su código fuente?</p>
 <p>Es una buena pregunta, así que vamos a comenzar con una pequeña parte del código fuente real de la vacuna BioNTech/Pfizer, también conocida como <a href="https://en.wikipedia.org/wiki/Tozinameran">BNT162b2</a>, Tozinameran o <a href="https://twitter.com/PowerDNS_Bert/status/1342109138965422083">Comirnaty</a>.</p>
 <center>
-<img src="https://berthub.eu/articles/bnt162b2.png" caption="First 500 characters of the BNT162b2 mRNA. Source: [World Health Organization](https://mednet-communities.net/inn/db/media/docs/11889.doc)">
+<img src="https://berthub.eu/articles/bnt162b2.png" caption="First 500 characters of the BNT162b2 mRNA. Source: [World Health Organization](https://mednet-communities.net/inn/db/media/docs/11889.doc)"/><br/> <a href="https://en.wikipedia.org/wiki/DNA_and_RNA_codon_tables">La tabla de codones</a> de ARN (Wikipedia).
 </center>
 <p>La vacuna de ARNm BNT162b tiene en su corazón este código digital. Posee una longitud de 4284 caracteres, así que cabe en unos cuantos tuits. Al comienzo del proceso de producción de la vacuna alguien copió este código en la impresora de ADN (sí), que luego convirtió los bytes del disco en moléculas de ADN reales.</p>
 <center>
-<img src="https://berthub.eu/articles/bioxp-3200.jpg" caption="Una impresora de ADN [Codex DNA](https://codexdna.com/products/bioxp-system/) BioXp 3200.">
+<img src="https://berthub.eu/articles/bioxp-3200.jpg" caption="Una impresora de ADN [Codex DNA](https://codexdna.com/products/bioxp-system/) BioXp 3200."/><br/> Una impresora de ADN <a href="https://codexdna.com/products/bioxp-system/">Codex DNA</a> BioXp 3200.
 </center>
 <p>Esta máquina produce pequeñas cantidades de ADN, que tras un montón de procesos químicos y biológicos termina como ARN (más sobre esto más tarde) en el vial de la vacuna. Una dosis de 30 migrogramos contiene en realidad 30 microgramos de ARN. Además, hay un sistema inteligente de empaquetado de lípidos (grasiento) que lleva el ARNm a nuestras células.</p>
 <p>El ARN es equivalente a la memoria volátil del ADN. El ADN es como el disco de estado sólido de la biología. El ADN es de larga duración, redundante y muy fiable. Pero al igual que los ordenadores no ejecutan código directamente del disco, antes de que ocurra nada, el código se copia a un sistema más rápido y versátil, aunque más frágil.</p>
@@ -109,7 +109,7 @@
 <h2 id="el-código-fuente">¡El código fuente!</h2>
 <p><a href="https://youtu.be/jp0opnxQ4rY?t=8">Vayamos ahora al inicio del todo, un buen sitio para empezar</a>. El documento de la OMS tiene esta útil imagen:</p>
 <center>
-<img src="https://berthub.eu/articles/vaccine-toc.png">
+<img src="https://berthub.eu/articles/vaccine-toc.png"/>
 </center>
 <p>Esto es una especie de índice de contenidos. Comenzaremos con «cap», mostrado como un pequeño sombrero.</p>
 <p>De la misma forma que no se pueden meter de sopetón un montón de instrucciones en el fichero de un ordenador y esperar que los ejecute sin más, el sistema operativo biológico requiere unas cabeceras, tiene enlazadores y cosas como convenciones de llamadas.</p>
@@ -158,7 +158,7 @@ Virus:   AUG UUU GUU UUU CUU GUU UUA UUG CCA CUA GUC UCU AGU CAG UGU GUU
 <p>Hay 4³=64 codones diferentes, dado que hay 4 caracteres de ARN y cada codón tiene tres de ellos. Pero sólo hay 20 aminoácidos diferentes. Esto significa que hay varios codones que codifican el mismo aminoácido.</p>
 <p>La vida usa la siguiente tabla casi universal de correspondencia entre codones de ARN y aminoácidos:</p>
 <center>
-<img src="https://berthub.eu/articles/rna-codon-table.png" caption="[La tabla de codones](https://en.wikipedia.org/wiki/DNA_and_RNA_codon_tables) de ARN (Wikipedia)">
+<img src="https://berthub.eu/articles/rna-codon-table.png" caption="[La tabla de codones](https://en.wikipedia.org/wiki/DNA_and_RNA_codon_tables) de ARN (Wikipedia)" /><br/> <a href="https://en.wikipedia.org/wiki/DNA_and_RNA_codon_tables">La tabla de codones</a> de ARN (Wikipedia).
 </center>
 <p>En esta tabla podemos ver que las modificaciones en la vacuna (UUU → UUC) son todas sinónimas. El código ARN de la vacuna es diferente, pero produce los mismos aminoácidos y proteínas.</p>
 <p>Si miramos con detalle, veremos que la mayoría de los cambios ocurren en la posición del tercer codón, marcados con un «3» arriba. Y si comprobamos la tabla universal de codones veremos que efectivamente esta tercera posición no tiene importancia para el aminoácido resultante.</p>
@@ -183,7 +183,7 @@ Virus:   CUU GAC AAA GUU GAG GCU GAA GUG CAA AUU GAU AGG UUG AUC ACA GGC
 <p><strong>Resulta que estos cambios mejoran notablemente la eficiencia vacuna.</strong></p>
 <p>Así que, ¿qué está pasando aquí? Si miramos la apariencia real de SARS-CoV-2, veremos que la proteína de la espiga es, bueno, un montón de espigas:</p>
 <center>
-<img src="https://berthub.eu/articles/sars-em.jpg" caption="[Partículas del virus del SARS](https://en.wikipedia.org/wiki/Severe_acute_respiratory_syndrome_coronavirus) (Wikipedia)">
+<img src="https://berthub.eu/articles/sars-em.jpg" caption="[Partículas del virus del SARS](https://en.wikipedia.org/wiki/Severe_acute_respiratory_syndrome_coronavirus) (Wikipedia)"/><br/> <a href="https://en.wikipedia.org/wiki/Severe_acute_respiratory_syndrome_coronavirus">Partículas del virus del SARS</a> (Wikipedia).
 </center>
 <p>Estas espigas están montadas en el cuerpo del virus («la proteína de la nucleocápside»). Pero la verdad es que nuestra vacuna solo genera las propias espigas, no se montan en ningún cuerpo de virus.</p>
 <p>Resulta que las proteínas sin modificar y libres colapsan en una estructura diferente. Si se inyectan como vacuna, eso hará que nuestros cuerpos desarrollen inmunidad, sí, pero solo contra la proteína de la espiga colapsada.</p>
@@ -206,7 +206,7 @@ Virus:   CUU GAC AAA GUU GAG GCU GAA GUG CAA AUU GAU AGG UUG AUC ACA GGC
 <p>Se podría escribir largo y tendido sobre el extremo 3’, pero aquí voy a <a href="https://en.wikipedia.org/wiki/Three_prime_untranslated_region">citar a la Wikipedia</a>: «La región no traducida 3’ juega un papel crucial en la expresión genética influyendo en la localización, estabilidad, exportación y eficiencia de la traducción de un ARN mensajero […] a pesar de nuestro conocimiento actual del extremo 3’, aún esconde varios misterios».</p>
 <p>Lo que sabemos es que algunos extremos 3’ tienen mucho éxito promoviendo la expresión proteínica. Según el documento de la OMS, la región tres prima de la vacuna de BioNTech/Pfizer fue seleccionada del «amino-terminal potenciador de la división (AES) del ARNm y el ARN ribosómico 12S codificado mitocondrial para conferir estabilidad al ARN y una alta expresión proteínica». A lo que apostillo, bien hecho.</p>
 <center>
-<img src="https://berthub.eu/articles/vaccine.jpg">
+<img src="https://berthub.eu/articles/vaccine.jpg"/>
 </center>
 <h2 id="el-aaaaaaaaaaaaaaaaaaaaaa-final">El AAAAAAAAAAAAAAAAAAAAAA final</h2>
 <p>El final del ARNm es poliadenilado. Esta es una forma técnica de decir que termina con un montón de AAAAAAAAAAAAAAAAAAA. Parece que incluso el ARNm ya ha tenido suficiente en 2020.</p>

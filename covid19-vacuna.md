@@ -37,13 +37,15 @@ Y ahora, puede que estas palabras te resulten chocantes: la vacuna es un líquid
 Es una buena pregunta, así que vamos a comenzar con una pequeña parte del código fuente real de la vacuna BioNTech/Pfizer, también conocida como [BNT162b2](https://en.wikipedia.org/wiki/Tozinameran), Tozinameran o [Comirnaty](https://twitter.com/PowerDNS_Bert/status/1342109138965422083).
 
 <center>
-<img src="https://berthub.eu/articles/bnt162b2.png" caption="First 500 characters of the BNT162b2 mRNA. Source: [World Health Organization](https://mednet-communities.net/inn/db/media/docs/11889.doc)">
+<img src="https://berthub.eu/articles/bnt162b2.png" caption="First 500 characters of the BNT162b2 mRNA. Source: [World Health Organization](https://mednet-communities.net/inn/db/media/docs/11889.doc)"/><br/>
+[La tabla de codones](https://en.wikipedia.org/wiki/DNA_and_RNA_codon_tables) de ARN (Wikipedia).
 </center>
 
 La vacuna de ARNm BNT162b tiene en su corazón este código digital. Posee una longitud de 4284 caracteres, así que cabe en unos cuantos tuits. Al comienzo del proceso de producción de la vacuna alguien copió este código en la impresora de ADN (sí), que luego convirtió los bytes del disco en moléculas de ADN reales.
 
 <center>
-<img src="https://berthub.eu/articles/bioxp-3200.jpg" caption="Una impresora de ADN [Codex DNA](https://codexdna.com/products/bioxp-system/) BioXp 3200.">
+<img src="https://berthub.eu/articles/bioxp-3200.jpg" caption="Una impresora de ADN [Codex DNA](https://codexdna.com/products/bioxp-system/) BioXp 3200."/><br/>
+Una impresora de ADN [Codex DNA](https://codexdna.com/products/bioxp-system/) BioXp 3200.
 </center>
 
 Esta máquina produce pequeñas cantidades de ADN, que tras un montón de procesos químicos y biológicos termina como ARN (más sobre esto más tarde) en el vial de la vacuna. Una dosis de 30 migrogramos contiene en realidad 30 microgramos de ARN. Además, hay un sistema inteligente de empaquetado de lípidos (grasiento) que lleva el ARNm a nuestras células.
@@ -88,7 +90,7 @@ Y así es cómo se obtiene el 95% de eficacia en la vacuna.
 [Vayamos ahora al inicio del todo, un buen sitio para empezar](https://youtu.be/jp0opnxQ4rY?t=8). El documento de la OMS tiene esta útil imagen:
 
 <center>
-<img src="https://berthub.eu/articles/vaccine-toc.png">
+<img src="https://berthub.eu/articles/vaccine-toc.png"/>
 </center>
 
 Esto es una especie de índice de contenidos. Comenzaremos con «cap», mostrado como un pequeño sombrero.
@@ -179,7 +181,8 @@ Hay 4³=64 codones diferentes, dado que hay 4 caracteres de ARN y cada codón ti
 La vida usa la siguiente tabla casi universal de correspondencia entre codones de ARN y aminoácidos:
 
 <center>
-<img src="https://berthub.eu/articles/rna-codon-table.png" caption="[La tabla de codones](https://en.wikipedia.org/wiki/DNA_and_RNA_codon_tables) de ARN (Wikipedia)">
+<img src="https://berthub.eu/articles/rna-codon-table.png" caption="[La tabla de codones](https://en.wikipedia.org/wiki/DNA_and_RNA_codon_tables) de ARN (Wikipedia)" /><br/>
+[La tabla de codones](https://en.wikipedia.org/wiki/DNA_and_RNA_codon_tables) de ARN (Wikipedia).
 </center>
 
 En esta tabla podemos ver que las modificaciones en la vacuna (UUU → UUC) son todas sinónimas. El código ARN de la vacuna es diferente, pero produce los mismos aminoácidos y proteínas.
@@ -220,7 +223,8 @@ El tercer y cuarto codones representan cambios reales. Los aminoácidos K y V ha
 Así que, ¿qué está pasando aquí? Si miramos la apariencia real de SARS-CoV-2, veremos que la proteína de la espiga es, bueno, un montón de espigas:
 
 <center>
-<img src="https://berthub.eu/articles/sars-em.jpg" caption="[Partículas del virus del SARS](https://en.wikipedia.org/wiki/Severe_acute_respiratory_syndrome_coronavirus) (Wikipedia)">
+<img src="https://berthub.eu/articles/sars-em.jpg" caption="[Partículas del virus del SARS](https://en.wikipedia.org/wiki/Severe_acute_respiratory_syndrome_coronavirus) (Wikipedia)"/><br/>
+[Partículas del virus del SARS](https://en.wikipedia.org/wiki/Severe_acute_respiratory_syndrome_coronavirus) (Wikipedia).
 </center>
 
 Estas espigas están montadas en el cuerpo del virus («la proteína de la nucleocápside»). Pero la verdad es que nuestra vacuna solo genera las propias espigas, no se montan en ningún cuerpo de virus.
@@ -259,7 +263,7 @@ Se podría escribir largo y tendido sobre el extremo 3', pero aquí voy a [citar
 Lo que sabemos es que algunos extremos 3' tienen mucho éxito promoviendo la expresión proteínica. Según el documento de la OMS, la región tres prima de la vacuna de BioNTech/Pfizer fue seleccionada del «amino-terminal potenciador de la división (AES) del ARNm y el ARN ribosómico 12S codificado mitocondrial para conferir estabilidad al ARN y una alta expresión proteínica». A lo que apostillo, bien hecho.
 
 <center>
-<img src="https://berthub.eu/articles/vaccine.jpg">
+<img src="https://berthub.eu/articles/vaccine.jpg"/>
 </center>
 
 ## El AAAAAAAAAAAAAAAAAAAAAA final
