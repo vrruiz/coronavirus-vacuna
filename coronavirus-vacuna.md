@@ -30,7 +30,7 @@ Por [Bert Hubert](https://berthub.eu/) | Traducción: [Víctor R. Ruiz](http://r
 
 ¡Bienvenidos! En este artículo estudiaremos el código de la vacuna ARNm de BioNTech/Pfizer carácter a carácter.
 
-> Quiero darle las gracias al numeroso grupo de personas que se ha tomado su tiempo en revisar la legibilidad y corrección de este artículo. Los fallos restantes responsabilidad mía, así que en caso de encontrar alguno, me gustaría saberlo rápidamente en [bert@hubertnet.nl](bert@hubertnet.nl) o @[PowerDNS_Bert](https://twitter.com/PowerDNS_Bert).
+> Quiero darle las gracias al numeroso grupo de personas que se ha tomado su tiempo en revisar la legibilidad y corrección de este artículo. Los fallos restantes responsabilidad mía, así que en caso de encontrar alguno, me gustaría saberlo rápidamente en [bert@hubertnet.nl](mailto:bert@hubertnet.nl) o @[PowerDNS_Bert](https://twitter.com/PowerDNS_Bert).
 
 Y ahora, puede que estas palabras te resulten chocantes: la vacuna es un líquido que se inyecta en el brazo... ¿cómo puede hablarse de su código fuente?
 
@@ -166,10 +166,10 @@ El _péptido señal_ no es muy largo, pero cuando revisamos el código hay difer
 (Aviso que para la comparación he remplazado el Ψ modificado por una U de ARN normal).
 
 ```
-           3   3   3   3   3   3   3   3   3   3   3   3   3   3   3   3
-Virus:   AUG UUU GUU UUU CUU GUU UUA UUG CCA CUA GUC UCU AGU CAG UGU GUU
- Vacuna: AUG UUC GUG UUC CUG GUG CUG CUG CCU CUG GUG UCC AGC CAG UGU GUU
-               !   !   !   !   ! ! ! !     !   !   !   !   !            
+          3   3   3   3   3   3   3   3   3   3   3   3   3   3   3   3
+Virus:  AUG UUU GUU UUU CUU GUU UUA UUG CCA CUA GUC UCU AGU CAG UGU GUU
+Vacuna: AUG UUC GUG UUC CUG GUG CUG CUG CCU CUG GUG UCC AGC CAG UGU GUU
+              !   !   !   !   ! ! ! !     !   !   !   !   !            
 ```
 
 ¿Qué pasa aquí? La agrupación del ARN en grupos de tres letras no es casual. Tres caracteres de ARN son un codón. Y cada codón codifica un aminoácido específico. El péptido señal de la vacuna está compuesto por exactamente los mismos aminoácidos que el propio virus.
@@ -204,12 +204,12 @@ Y la vacuna de ARN consigue eso remplazando muchos caracteres con Gs y Cs, allá
 Los siguientes 3777 caracteres de la vacuna ARN también han sido optimizadas para añadir un montón de Cs y Gs. No listaré todo el código para no alargarme demasiado, pero vamos a fijarnos en una secuencia especialmente interesante. Este es el trozo que hace que funcione, la parte que nos ayuda a regresar a la vida normal:
 
 ```
-                  *   *
-          L   D   K   V   E   A   E   V   Q   I   D   R   L   I   T   G
-Virus:   CUU GAC AAA GUU GAG GCU GAA GUG CAA AUU GAU AGG UUG AUC ACA GGC
- Vacuna: CUG GAC CCU CCU GAG GCC GAG GUG CAG AUC GAC AGA CUG AUC ACA GGC
-          L   D   P   P   E   A   E   V   Q   I   D   R   L   I   T   G
-           !     !!! !!        !   !       !   !   !   ! !        
+                 *   *
+         L   D   K   V   E   A   E   V   Q   I   D   R   L   I   T   G
+Virus:  CUU GAC AAA GUU GAG GCU GAA GUG CAA AUU GAU AGG UUG AUC ACA GGC
+Vacuna: CUG GAC CCU CCU GAG GCC GAG GUG CAG AUC GAC AGA CUG AUC ACA GGC
+         L   D   P   P   E   A   E   V   Q   I   D   R   L   I   T   G
+          !     !!! !!        !   !       !   !   !   ! !        
 ```      
 
 Aquí vemos los cambios sinónimos del ARN previsibles. Por ejemplo, en el primer codón vemos que se ha cambiado CUU por CUG. Esto añade otra G a la vacuna, que sabemos que favorece la producción de proteínas. Tanto CUU como CUG codifican el animoácido L o leucina, así que no hay cambios en la proteína.
@@ -245,11 +245,11 @@ Si revisamos el resto del código fuente, encontraremos algunas pequeñas modifi
 
 
 ```
-          V   L   K   G   V   K   L   H   Y   T   s             
-  Virus: GUG CUC AAA GGA GUC AAA UUA CAU UAC ACA UAA
- Vacuna: GUG CUG AAG GGC GUG AAA CUG CAC UAC ACA UGA UGA 
-          V   L   K   G   V   K   L   H   Y   T   s   s          
-               !   !   !   !     ! !   !          ! 
+         V   L   K   G   V   K   L   H   Y   T   s             
+ Virus: GUG CUC AAA GGA GUC AAA UUA CAU UAC ACA UAA
+Vacuna: GUG CUG AAG GGC GUG AAA CUG CAC UAC ACA UGA UGA 
+         V   L   K   G   V   K   L   H   Y   T   s   s          
+              !   !   !   !     ! !   !          ! 
 ```
 
 Al final de la proteína encontramos un codón de parada, indicado por una «s» minúscula. Es una forma cortés de indicar que la proteína debe acabar aquí. El virus original usa el codón de parada UAA, la vacuna usa dos codones de parada UGA, quizás como precaución adicional.
