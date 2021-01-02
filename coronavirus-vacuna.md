@@ -88,7 +88,7 @@ Hasta ahora todo es bastante digital. Si tienes dudas, puedes consultar el [docu
 > Hay más información disponible en [«Qué es la vida»](https://berthub.eu/articles/posts/what-is-life/), que puede ser de ayuda para entender el resto de esta página. O si lo prefieres en vídeo, dispongo de [uno de dos horas](https://berthub.eu/dna).
 
 ## Así que, ¿qué HACE el código?
-/bil
+
 La idea de una vacuna es enseñar a nuestro sistema inmunitario a luchar contra una patógeno sin enfermar por el camino. Tradicionalmente, se ha hecho inyectando un virus atenuado o 
 incapacitado y un asistente para alarmar al sistema inmunitario y que entre en acción. Esta es una técnica análoga a la que necesitaba millones de huevos (o insectos). También requería un montón de suerte y mucho tiempo. A veces se usaba un virus diferente (no relacionado).
 
