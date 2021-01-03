@@ -299,7 +299,10 @@ AAAAAAAAAA AAAAAAAAAA AAAAAAAAAA AAAAAAAAAA AAAAAAAAAA AAAA
 
 Esto son 30 As y luego un «un enlazador de 10 nucleótidos» (GCAUAUGACU) seguido de otras 70 As.
 
-Sospecho que lo que vemos aquí es el resultado de una optimización propietaria adicional para potenciar aún más la expresión proteínica.
+
+Hay varias teorías de por qué el enlazador está ahí. Algunas personas me han sugerido que está relacionado con la estabilidad del ADN plasmídico, y también he recibido ésto de un verdadero experto:
+
+«El enlazador de 10 nucleótidos en la cola de poli-A facilita unir los fragmentos del ADN sintético que se convierte en plantilla para transcribir el ARNm. También reduce el emparejamiento incorrecto de la polimerasa ARN T7 por lo que el ARNm transcrito es más uniforme en longitud».
 
 ## En resumen
 
